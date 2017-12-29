@@ -113,7 +113,33 @@ export let ewSchema = {
             }
         },
 
-        listing_config : {},
+        customizations : {
+            required   : true,   // even if empty
+            additionalProperties : false,
+            properties : {
+                listing_config : {},
+                listing_layout : {
+                    type : "object",
+                    additionalProperties : false,
+                    properties : {
+                        comments_enabled : { type : "boolean" },
+                        response_columns : { type : "integer", minimum : 1, maximum : 5 },
+                        response_layout  : {
+                            type  : "array",
+                            items : {
+                                type : "object",
+                                additionalProperties : false,
+                                properties : {
+                                    elem_num : { type : "integer" },
+                                    num_cols : { type : "integer", minimum : 1, maximum : 5 }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
         created        : {},
         updated        : {},
         deleted        : {}

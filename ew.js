@@ -63,17 +63,17 @@ exports.ewSchema = {
                 "theme": {
                     type: "object",
                     properties: {
-                        "text-primary-color": { type: "string" },
-                        "text-accent-color": { type: "string" },
-                        "text-dark-color": { type: "string" },
-                        "text-light-color": { type: "string" },
-                        "background-primary-color": { type: "string" },
-                        "input-accent-color": { type: "string" },
-                        "chart-color1": { type: "string" },
-                        "chart-color2": { type: "string" },
-                        "chart-color3": { type: "string" },
-                        "chart-color4": { type: "string" },
-                        "chart-color5": { type: "string" }
+                        "text-primary-color": { type: "string", format: "color" },
+                        "text-accent-color": { type: "string", format: "color" },
+                        "text-dark-color": { type: "string", format: "color" },
+                        "text-light-color": { type: "string", format: "color" },
+                        "background-primary-color": { type: "string", format: "color" },
+                        "input-accent-color": { type: "string", format: "color" },
+                        "chart-color1": { type: "string", format: "color" },
+                        "chart-color2": { type: "string", format: "color" },
+                        "chart-color3": { type: "string", format: "color" },
+                        "chart-color4": { type: "string", format: "color" },
+                        "chart-color5": { type: "string", format: "color" }
                     }
                 },
                 "props": {}
@@ -105,7 +105,32 @@ exports.ewSchema = {
                 }
             }
         },
-        listing_config: {},
+        customizations: {
+            required: true,
+            additionalProperties: false,
+            properties: {
+                listing_config: {},
+                listing_layout: {
+                    type: "object",
+                    additionalProperties: false,
+                    properties: {
+                        comments_enabled: { type: "boolean" },
+                        response_columns: { type: "integer", minimum: 1, maximum: 5 },
+                        response_layout: {
+                            type: "array",
+                            items: {
+                                type: "object",
+                                additionalProperties: false,
+                                properties: {
+                                    elem_num: { type: "integer" },
+                                    num_cols: { type: "integer", minimum: 1, maximum: 5 }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         created: {},
         updated: {},
         deleted: {}

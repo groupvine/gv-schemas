@@ -122,8 +122,9 @@ export let ewSchema = {
                     type : "object",
                     additionalProperties : false,
                     properties : {
-                        comments_enabled : { type : "boolean" },
-                        response_columns : { type : "integer", minimum : 1, maximum : 5 },
+                        comments_enabled    : { type : "boolean" },
+                        response_columns    : { type : "integer", minimum : 1, maximum : 5 },
+                        response_row_height : { type : 'string' },
                         response_layout  : {
                             type  : "array",
                             items : {

@@ -110,12 +110,14 @@ exports.ewSchema = {
             additionalProperties: false,
             properties: {
                 listing_config: {},
+                comments_enabled: { type: "boolean" },
+                dflt_hidden: { type: "boolean" },
                 listing_layout: {
                     type: "object",
                     additionalProperties: false,
                     properties: {
-                        comments_enabled: { type: "boolean" },
                         response_columns: { type: "integer", minimum: 1, maximum: 5 },
+                        response_row_height: { type: "string" },
                         response_layout: {
                             type: "array",
                             items: {
@@ -128,6 +130,14 @@ exports.ewSchema = {
                             }
                         }
                     }
+                },
+                terms: {
+                    hide: { type: "string" },
+                    unhide: { type: "string" },
+                    listing: { type: "string" },
+                    responses: { type: "string" },
+                    something_hidden: { type: "string" },
+                    nothing_hidden: { type: "string" } // Listing filter option title
                 }
             }
         },

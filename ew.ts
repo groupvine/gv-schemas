@@ -117,14 +117,15 @@ export let ewSchema = {
             required   : true,   // even if empty
             additionalProperties : false,
             properties : {
-                listing_config : {},
+                listing_config   : {},
+                comments_enabled : { type : "boolean" },
+                dflt_hidden      : { type : "boolean" },   // Whether responses are initially hidden
                 listing_layout : {
                     type : "object",
                     additionalProperties : false,
                     properties : {
-                        comments_enabled    : { type : "boolean" },
                         response_columns    : { type : "integer", minimum : 1, maximum : 5 },
-                        response_row_height : { type : 'string' },
+                        response_row_height : { type : "string" },
                         response_layout  : {
                             type  : "array",
                             items : {
@@ -137,6 +138,14 @@ export let ewSchema = {
                             }
                         }
                     }
+                },
+                terms : {
+                    hide             : { type : "string" },   // Hide button for responses
+                    unhide           : { type : "string" },   // Unhide button for responses
+                    listing          : { type : "string" },   // Tab heading
+                    responses        : { type : "string" },   // Tab heading
+                    something_hidden : { type : "string" },   // Listing filter option title
+                    nothing_hidden   : { type : "string" }    // Listing filter option title
                 }
             }
         },

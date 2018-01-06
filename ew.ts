@@ -15,7 +15,7 @@ export let ewSchema = {
         ew_alias  : { type : "string", pattern : "^[a-zA-Z0-9_-]+$" },
 
         dflt_lang : { type : "string"},
-        dflt_deliv_eng : { type : "string", minLength : 2, maxLength : 2 },
+        dflt_deliv_eng : { type : "string", minLength : 2 },
 
         ticketing_rqd : { type : "boolean" },
         anonymousity  : { type : "integer", minimum : 0, maximum : 3 },

@@ -140,12 +140,14 @@ export let ewSchema = {
                     }
                 },
                 terms : {
-                    hide             : { type : "string" },   // Hide button for responses
-                    unhide           : { type : "string" },   // Unhide button for responses
-                    listing          : { type : "string" },   // Tab heading
-                    responses        : { type : "string" },   // Tab heading
-                    something_hidden : { type : "string" },   // Listing filter option title
-                    nothing_hidden   : { type : "string" }    // Listing filter option title
+                    // if strings, then the term is for the default language, 
+                    // if objects, then properties are the language code first
+                    hide             : { type : ["string", "object"] },   // Hide button for responses
+                    unhide           : { type : ["string", "object"] },   // Unhide button for responses
+                    listing          : { type : ["string", "object"] },   // Tab heading
+                    responses        : { type : ["string", "object"] },   // Tab heading
+                    something_hidden : { type : ["string", "object"] },   // Listing filter option title
+                    nothing_hidden   : { type : ["string", "object"] }    // Listing filter option title
                 }
             }
         },

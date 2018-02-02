@@ -118,6 +118,7 @@ export let ewSchema = {
             additionalProperties : false,
             properties : {
                 listing_config   : {},
+                rcpt_menu_hidden : { type : "boolean" },
                 comments_enabled : { type : "boolean" },
                 dflt_hidden      : { type : "boolean" },   // Whether responses are initially hidden
                 listing_layout : {

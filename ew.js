@@ -86,19 +86,23 @@ exports.ewSchema = {
                 type: "object",
                 additionalProperties: false,
                 properties: {
-                    type: { required: true, type: "integer", minimum: 1, maximum: 3 },
+                    type: { required: true, type: "integer", minimum: 1, maximum: 4 },
                     condition: { type: "string" },
                     details: {
                         type: "object",
                         additionalProperties: false,
                         properties: {
+                            // For email type
                             toAdrs: {
-                                required: true,
                                 type: "array",
                                 items: { type: "string" }
                             },
                             fromAdr: { type: "string" },
-                            engine: { type: "string", minLength: 2, maxLength: 2 }
+                            engine: { type: "string", minLength: 2, maxLength: 2 },
+                            // For SOAP API type
+                            server: { type: "string" },
+                            wsdl: { type: "string" },
+                            token: { type: "string" }
                         }
                     },
                     delay_s: { type: "number" }

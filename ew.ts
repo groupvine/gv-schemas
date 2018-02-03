@@ -133,7 +133,7 @@ export let ewSchema = {
                                 type : "object",
                                 additionalProperties : false,
                                 properties : {
-                                    type     : { type : "string" },
+                                    type     : { type : "string", enum : ["textrow", "gridcell"] },
                                     elem_num : { type : "integer" },
                                     num_cols : { type : "integer", minimum : 1, maximum : 5 }
                                 }

@@ -102,7 +102,8 @@ exports.ewSchema = {
                             // For SOAP API type
                             server: { type: "string" },
                             wsdl: { type: "string" },
-                            token: { type: "string" }
+                            token: { type: "string" },
+                            ew_alias: { type: "string" } // overrides
                         }
                     },
                     delay_s: { type: "number" }

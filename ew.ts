@@ -108,9 +108,10 @@ export let ewSchema = {
                             engine  : { type : "string", minLength : 2, maxLength : 2 },
 
                             // For SOAP API type
-                            server  : { type : "string" },
-                            wsdl    : { type : "string" },
-                            token   : { type : "string" }
+                            server   : { type : "string" },
+                            wsdl     : { type : "string" },
+                            token    : { type : "string" },
+                            ew_alias : { type : "string" }  // overrides
                         }
                     },
                     delay_s   : { type : "number" }

@@ -66,6 +66,7 @@ export let ewSchema = {
         style         : {
             type : ["object", "null"],
             properties : {
+                "sass"  : { type : "string" },
                 "theme" : {
                     type : "object",
                     properties : {

@@ -100,6 +100,7 @@ exports.ewSchema = {
                             },
                             fromAdr: { type: "string" },
                             engine: { type: "string", minLength: 2, maxLength: 2 },
+                            signOff: { type: "string" },
                             // For SOAP API type
                             server: { type: "string" },
                             wsdl: { type: "string" },

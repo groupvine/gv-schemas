@@ -19,7 +19,7 @@ exports.ewUpdateSchema = {
         msg_type: {
             required: true,
             type: "string",
-            "enum": ["initResponses", "initComments", "update"]
+            "enum": ["initResponses", "initComments", "updateResponses", "updateComments"]
         },
         ew_id: {
             // in case there are multiple on the page
@@ -93,10 +93,10 @@ exports.ewUpdateSchema = {
                         additionalProperties: false,
                         properties: {
                             // Identity properties only filled in according to user role and anonymousity setting
-                            first_name: { required: false, type: "string" },
-                            last_name: { required: false, type: "string" },
+                            given_name: { required: false, type: "string" },
+                            family_name: { required: false, type: "string" },
                             middle_name: { required: false, type: "string" },
-                            email_address: { required: false, type: "string" }
+                            email: { required: false, type: "string" }
                         }
                     },
                     value: {

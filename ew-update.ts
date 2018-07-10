@@ -109,6 +109,19 @@ export let ewUpdateSchema = {
                         }
                     },
 
+                    responder : {
+                        required             : true,
+                        type                 : "object",
+                        additionalProperties : false,
+                        properties           : {
+                            // Identity properties only filled in according to user role and anonymousity setting
+                            given_name    : { required : false, type : "string" },
+                            family_name   : { required : false, type : "string" },
+                            middle_name   : { required : false, type : "string" },
+                            email         : { required : false, type : "string" }
+                        }
+                    },
+
                     value : {
                         required : true,
                         type     : "string"

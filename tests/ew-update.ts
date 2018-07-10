@@ -53,11 +53,13 @@ let msg3 = {
         {
             datetime   : "2018-07-11T12:39:18+00:00",
             hidden     : true,
-            commenter  : { given_name : "John", family_name : "Smith" },
+            responder  : { given_name : "John", family_name : "Smith" },
+            commenter  : { given_name : "Sue",  family_name : "Jones" },
             value      : "blah blah",
         },
         {
             datetime   : "2018-07-11T14:39:18+00:00",
+            responder  : { given_name : "John", family_name : "Smith" },
             commenter  : { given_name : "Administrator" },
             value      : "Thanks for the kudos!"
         }
@@ -72,6 +74,7 @@ let msg4 = {
     comments : [
         {
             datetime   : "2018-07-11T14:39:18+00:00",
+            responder  : {},
             commenter  : {},
             value      : "Here here!"
         }

@@ -1,5 +1,7 @@
 # GroupVine API Schemas
 
+Conforms to [JSONSchema v4](http://json-schema.org).
+
 Example use, using ```is-my-json-valid``` npm package:
 
 ```

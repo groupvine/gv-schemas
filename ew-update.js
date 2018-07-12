@@ -39,7 +39,7 @@ exports.ewUpdateSchema = {
                         required: true,
                         oneOf: [
                             {
-                                type: "string"
+                                type: ["string", "number"]
                             },
                             {
                                 type: "object",

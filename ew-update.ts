@@ -42,7 +42,7 @@ export let ewUpdateSchema = {
                         required : true,
                         oneOf    : [
                             {
-                                type : "string"
+                                type : ["string", "number"]
                             },
 
                             {

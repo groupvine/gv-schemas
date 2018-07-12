@@ -45,7 +45,7 @@ exports.ewUpdateSchema = {
                                 type: "object",
                                 additionalProperties: false,
                                 properties: {
-                                    choice: { required: true, type: "integer" },
+                                    choice: { required: true, type: ["number", "string"] },
                                     abbrev: { required: false, type: "string" },
                                     label: { required: false, type: "string" }
                                 }
@@ -56,7 +56,7 @@ exports.ewUpdateSchema = {
                                     type: "object",
                                     additionalProperties: false,
                                     properties: {
-                                        choice: { required: true, type: "integer" },
+                                        choice: { required: true, type: ["number", "string"] },
                                         abbrev: { required: false, type: "string" },
                                         label: { required: false, type: "string" }
                                     }

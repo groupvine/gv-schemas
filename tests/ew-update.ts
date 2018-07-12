@@ -76,11 +76,11 @@ testMsgs.push({
     ew_id    : 7,
     responses : [
         {
-            elem_num   : 1,
-            elem_alias : "happiness",
+            elem_num   : 4,
+            elem_alias : "favorites",
             value      : [
-                { choice : 1, abbrev : "Happy together" },
-                { choice : 2, abbrev : "Doing OK" }
+                { choice : 'p', abbrev : "purple" },
+                { choice : 'y', abbrev : "yellow" }
             ]
         }
     ]

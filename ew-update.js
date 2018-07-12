@@ -45,7 +45,7 @@ exports.ewUpdateSchema = {
                                 type: "object",
                                 additionalProperties: false,
                                 properties: {
-                                    raw: { required: true, type: "integer" },
+                                    raw: { required: true, type: ["integer", "string"] },
                                     text: { required: false, type: "string" },
                                     label: { required: false, type: "string" }
                                 }
@@ -56,7 +56,7 @@ exports.ewUpdateSchema = {
                                     type: "object",
                                     additionalProperties: false,
                                     properties: {
-                                        raw: { required: true, type: "integer" },
+                                        raw: { required: true, type: ["integer", "string"] },
                                         text: { required: false, type: "string" },
                                         label: { required: false, type: "string" }
                                     }

@@ -52,6 +52,20 @@ let msg2 = {
     ]
 }
 
+let msg2a = {
+    version  : 1,
+    datetime : "2018-07-10T00:39:18Z",
+    msg_type : "updateResponses",
+    ew_id    : 7,
+    responses : [
+        {
+            elem_num   : 3,
+            elem_alias : "questions",
+            value      : { raw : "How can I get more?", text : "How can I get more?" }
+        }
+    ]
+}
+
 let msg3 = {
     version  : 1,
     datetime : "2018-07-10T00:39:18Z",

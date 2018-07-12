@@ -30,7 +30,7 @@ exports.ewUpdateSchema = {
             required: false,
             type: "array",
             items: {
-                type: "object",
+                type: ["object", "null"],
                 additionalProperties: false,
                 properties: {
                     elem_num: { required: true, type: "integer" },
@@ -71,7 +71,7 @@ exports.ewUpdateSchema = {
             required: false,
             type: "array",
             items: {
-                type: "object",
+                type: ["object", "null"],
                 additionalProperties: false,
                 properties: {
                     datetime: {

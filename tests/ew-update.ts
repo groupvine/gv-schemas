@@ -5,7 +5,9 @@ import * as jsonValidator    from 'is-my-json-valid';
 
 let validator = jsonValidator(ewUpdateSchema, {verbose : true, greedy : true});
 
-let msg1 = {
+let testMsgs = [];
+
+testMsgs.push({
     version  : 1,
     datetime : "2018-07-10T00:39:18Z",
     msg_type : "initResponses",
@@ -14,7 +16,7 @@ let msg1 = {
         {
             elem_num   : 1,
             elem_alias : "happiness",
-            value      : { raw : 1, text : "Happy together" }
+            value      : { choice : 1, abbrev : "Happy together" }
         },
         {
             elem_num   : 3,
@@ -24,21 +26,22 @@ let msg1 = {
         {
             elem_num   : 4,
             elem_alias : "favorites",
-            value      : [ { raw : 1, text : "blue" }, { raw : 3, text : "red"} ]
+            value      : [ { choice : 1, abbrev : "blue" }, { choice : 3, abbrev : "red"} ]
         }
     ]
-}
+});
 
 
-let msg1a = {
+testMsgs.push({
     version  : 1,
     datetime : "2018-07-10T00:39:18Z",
     msg_type : "initResponses",
     ew_id    : 7,
     responses : []  // indicates no responses yet
-}
+});
 
-let msg2 = {
+
+testMsgs.push({
     version  : 1,
     datetime : "2018-07-10T00:39:18Z",
     msg_type : "updateResponses",
@@ -47,12 +50,12 @@ let msg2 = {
         {
             elem_num   : 1,
             elem_alias : "happiness",
-            value      : { raw : 1, text : "Happy together" }
+            value      : { choice : 1, abbrev : "Happy together" }
         }
     ]
-}
+});
 
-let msg2a = {
+testMsgs.push({
     version  : 1,
     datetime : "2018-07-10T00:39:18Z",
     msg_type : "updateResponses",
@@ -61,12 +64,29 @@ let msg2a = {
         {
             elem_num   : 3,
             elem_alias : "questions",
-            value      : { raw : "How can I get more?", text : "How can I get more?" }
+            value      : "How can I get more?"
         }
     ]
-}
+});
 
-let msg3 = {
+testMsgs.push({
+    version  : 1,
+    datetime : "2018-07-10T00:39:18Z",
+    msg_type : "updateResponses",
+    ew_id    : 7,
+    responses : [
+        {
+            elem_num   : 1,
+            elem_alias : "happiness",
+            value      : [
+                { choice : 1, abbrev : "Happy together" },
+                { choice : 2, abbrev : "Doing OK" }
+            ]
+        }
+    ]
+});
+
+testMsgs.push({
     version  : 1,
     datetime : "2018-07-10T00:39:18Z",
     msg_type : "initComments",
@@ -86,9 +106,9 @@ let msg3 = {
             value      : "Thanks for the kudos!"
         }
     ]
-}
+});
 
-let msg4 = {
+testMsgs.push({
     version  : 1,
     datetime : "2018-07-10T00:39:18Z",
     msg_type : "updateComments",
@@ -101,18 +121,18 @@ let msg4 = {
             value      : "Here here!"
         }
     ]
-}
+});
 
-function runTest(msg:any, msgNum:any) {
+function runTest(msg:any, msgNum:number) {
     let isValid = validator(msg);
 
     if (!isValid) {
-        console.log(`EW Update message ${msgNum} invalid, with errors:`, validator.errors);
+        console.log(`EW Update message ${msgNum} invalid, with errors:`, validator.errors, msg);
+    } else {
+        console.log(`Test ${msgNum} passed`);
     }
 }
 
-runTest(msg1,  1);
-runTest(msg1a, '1a');
-runTest(msg2,  2);
-runTest(msg3,  3);
-runTest(msg4,  4);
+for (let i = 0; i < testMsgs.length; i++) {
+    runTest(testMsgs[i], i);
+}

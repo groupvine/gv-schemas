@@ -49,8 +49,8 @@ export let ewUpdateSchema = {
                                 type                 : "object",
                                 additionalProperties : false,
                                 properties           : {
-                                    raw    : { required : true,  type : ["integer", "string"] },
-                                    text   : { required : false, type : "string"  },
+                                    choice : { required : true,  type : "integer" },
+                                    abbrev : { required : false, type : "string"  },
                                     label  : { required : false, type : "string"  }
                                 }
                             },
@@ -61,8 +61,8 @@ export let ewUpdateSchema = {
                                     type                 : "object",
                                     additionalProperties : false,
                                     properties           : {
-                                        raw    : { required : true,  type : ["integer", "string"] },
-                                        text   : { required : false, type : "string"  },
+                                        choice : { required : true,  type : "integer" },
+                                        abbrev : { required : false, type : "string"  },
                                         label  : { required : false, type : "string"  }
                                     }
                                 }

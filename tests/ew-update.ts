@@ -30,6 +30,14 @@ let msg1 = {
 }
 
 
+let msg1a = {
+    version  : 1,
+    datetime : "2018-07-10T00:39:18Z",
+    msg_type : "initResponses",
+    ew_id    : 7,
+    responses : []  // indicates no responses yet
+}
+
 let msg2 = {
     version  : 1,
     datetime : "2018-07-10T00:39:18Z",
@@ -81,7 +89,7 @@ let msg4 = {
     ]
 }
 
-function runTest(msg:any, msgNum:number) {
+function runTest(msg:any, msgNum:any) {
     let isValid = validator(msg);
 
     if (!isValid) {
@@ -89,7 +97,8 @@ function runTest(msg:any, msgNum:number) {
     }
 }
 
-runTest(msg1, 1);
-runTest(msg2, 2);
-runTest(msg3, 3);
-runTest(msg4, 4);
+runTest(msg1,  1);
+runTest(msg1a, '1a');
+runTest(msg2,  2);
+runTest(msg3,  3);
+runTest(msg4,  4);

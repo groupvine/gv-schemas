@@ -14,7 +14,7 @@ let msg1 = {
         {
             elem_num   : 1,
             elem_alias : "happiness",
-            value      : { value : 1, abbrev : "Happy together" }
+            value      : { raw : 1, text : "Happy together" }
         },
         {
             elem_num   : 3,
@@ -24,7 +24,7 @@ let msg1 = {
         {
             elem_num   : 4,
             elem_alias : "favorites",
-            value      : [ { value : 1, abbrev : "blue" }, { value : 3, abbrev : "red"} ]
+            value      : [ { raw : 1, text : "blue" }, { raw : 3, text : "red"} ]
         }
     ]
 }
@@ -39,7 +39,7 @@ let msg2 = {
         {
             elem_num   : 1,
             elem_alias : "happiness",
-            value      : { value : 1, abbrev : "Happy together" }
+            value      : { raw : 1, text : "Happy together" }
         }
     ]
 }

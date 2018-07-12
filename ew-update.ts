@@ -33,7 +33,7 @@ export let ewUpdateSchema = {
             required : false,
             type     : "array",
             items    : {
-                type                 : ["object", "null"], // null allows for empty array
+                type                 : "object",
                 additionalProperties : false,
                 properties           : {
                     elem_num    : { required : true,  type : "integer" },
@@ -77,7 +77,7 @@ export let ewUpdateSchema = {
             required : false,
             type     : "array",
             items    : {
-                type                 : ["object", "null"], // null allows for empty array
+                type                 : "object",
                 additionalProperties : false,
                 properties           : {
                     datetime : {

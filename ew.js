@@ -101,11 +101,22 @@ exports.ewSchema = {
                             fromAdr: { type: "string" },
                             engine: { type: "string", minLength: 2, maxLength: 2 },
                             signOff: { type: "string" },
-                            // For SOAP API type
+                            // Common variables for APIs
+                            // To date, supports Bronto-like SOAP APIs and Klaviyo-like REST APIs
                             server: { type: "string" },
-                            wsdl: { type: "string" },
-                            token: { type: "string" },
-                            ew_alias: { type: "string" } // overrides
+                            ew_alias: { type: "string" },
+                            api_url: { type: "string" },
+                            api_key: {
+                                type: "object",
+                                additionalProperties: false,
+                                properties: {
+                                    name: { type: "string" },
+                                    value: { type: "string" }
+                                }
+                            }
+                            // outdated
+                            // wsdl     : { type : "string" },
+                            // token    : { type : "string" },
                         }
                     },
                     delay_s: { type: "number" }

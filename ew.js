@@ -131,6 +131,23 @@ exports.ewSchema = {
                 rcpt_menu_hidden: { type: "boolean" },
                 comments_enabled: { type: "boolean" },
                 dflt_hidden: { type: "boolean" },
+                responses_layout: {
+                    type: "object",
+                    additionalProperties: false,
+                    properties: {
+                        elements: {
+                            type: "array",
+                            items: {
+                                type: "object",
+                                additionalProperties: false,
+                                properties: {
+                                    elem_num: { type: "integer" },
+                                    summary_height: { type: "integer" }
+                                }
+                            }
+                        }
+                    }
+                },
                 listing_layout: {
                     type: "object",
                     additionalProperties: false,

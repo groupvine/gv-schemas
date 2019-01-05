@@ -7,7 +7,8 @@
     "test": "tsc tests/*.ts; node tests/ew-update.js",
     "lint": "tslint -t verbose -e './**/node_modules/**'  '*.ts' ; exit 0",
     "build:src": "tsc *.ts",
-    "build": "npm run build:src; npm run lint"
+    "build": "npm run build:src; npm run lint",
+    "reinstall": "rm -rf node_modules && npm install"
   },
   "repository": {
     "type": "git",

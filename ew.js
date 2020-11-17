@@ -1,5 +1,6 @@
 "use strict";
 exports.__esModule = true;
+exports.ewSchema = void 0;
 exports.ewSchema = {
     required: true,
     type: "object",

@@ -140,6 +140,7 @@ export let ewSchema = {
                 listing_config   : {},
                 rcpt_menu_hidden : { type : "boolean" },
                 comments_enabled : { type : "boolean" },
+                summary_vis      : { type : "boolean" },   // whether summary chart/text is visible/hidden
                 dflt_hidden      : { type : "boolean" },   // Whether responses are initially hidden
                 responses_layout : {
                     type : "object",

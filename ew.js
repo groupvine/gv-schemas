@@ -131,6 +131,7 @@ exports.ewSchema = {
                 listing_config: {},
                 rcpt_menu_hidden: { type: "boolean" },
                 comments_enabled: { type: "boolean" },
+                summary_vis: { type: "boolean" },
                 dflt_hidden: { type: "boolean" },
                 responses_layout: {
                     type: "object",

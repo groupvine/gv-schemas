@@ -3,7 +3,7 @@ import { ewUpdateSchema }    from '../ew-update';
 // let jsonValidator          = require('is-my-json-valid');
 import * as jsonValidator    from 'is-my-json-valid';
 
-let validator = jsonValidator(ewUpdateSchema, {verbose : true, greedy : true});
+let validator = jsonValidator(<any>ewUpdateSchema, {verbose : true, greedy : true});
 
 let testMsgs = [];
 

@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.stylesSchema = void 0;
 exports.stylesSchema = {
     type: ["object", "null"],

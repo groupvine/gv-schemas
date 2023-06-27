@@ -14,6 +14,14 @@ export let ewSchema = {
         ew_name   : { required : true, type : "string" },
         ew_alias  : { type : "string", pattern : "^[a-zA-Z0-9_-]+$" },
 
+        context_id     : { type : ["integer", "null"]  },  // e.g., GV group_id or msg_id
+        context_status : { type : ["integer", "null"], minimum : 1, maximum : 2 },  // EWContextType (currently just 1 & 2)
+
+        ew_group_id : { type :  ["integer", "null"] },  // for grouping EWs for assembled set of responses
+                    
+        disp_header : { type : "boolean" }, // whether EW name & menu are shown
+        disp_listing : { type : "boolean" }, // show response listing & comments
+
         dflt_lang : { type : "string"},
         dflt_deliv_eng : { type : "string", minLength : 2 },
 
@@ -21,7 +29,7 @@ export let ewSchema = {
         anonymousity  : { type : "integer", minimum : 0, maximum : 3 },
 
         next_elem_num : { type : "integer"},
-
+        
         elements  : {
             required : true,
             type : "array",
@@ -33,8 +41,10 @@ export let ewSchema = {
                     elem_type   : { required : true, type : "integer", minimum : 1, maximum : 7 },
                     label       : { required : true, type : "string" },
                     elem_alias  : { type : "string", pattern : "^[a-zA-Z0-9_]+$" },  // dash disallowed
+
                     display_fmt : { type : "integer", minimum : 0, maximum : 1 },
                     results_fmt : { type : "integer", minimum : 0, maximum : 10 },
+
                     required    : { type : "boolean" },
                     choices     : {
                         type  : "array",

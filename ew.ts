@@ -65,6 +65,7 @@ export let ewSchema = {
                             min      : { type : "integer" },
                             max      : { type : "integer" },
                             maxLen   : { type : "integer" },
+                            maxPicks : { type : "integer" },
                             chars_re : { type : "string" },
                             input_re : { type : "string" }
                         }

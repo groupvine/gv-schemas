@@ -57,6 +57,7 @@ exports.ewSchema = {
                             max: { type: "integer" },
                             maxLen: { type: "integer" },
                             maxPicks: { type: "integer" },
+                            numWinners: { type: "integer" },
                             chars_re: { type: "string" },
                             input_re: { type: "string" }
                         }

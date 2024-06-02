@@ -154,6 +154,7 @@ export let ewSchema = {
                 comments_enabled : { type : "boolean" },
                 summary_vis      : { type : "boolean" },   // whether summary chart/text is visible/hidden
                 summary_incl     : { type : "boolean" },   // whether summary chart/text box is included
+                static_email     : { type : "boolean" },   // whether email is rendered with only a static snapshot
                 dflt_hidden      : { type : "boolean" },   // Whether responses are initially hidden
                 responses_layout : {
                     type : "object",

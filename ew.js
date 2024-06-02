@@ -140,6 +140,7 @@ exports.ewSchema = {
                 comments_enabled: { type: "boolean" },
                 summary_vis: { type: "boolean" },
                 summary_incl: { type: "boolean" },
+                static_email: { type: "boolean" },
                 dflt_hidden: { type: "boolean" },
                 responses_layout: {
                     type: "object",

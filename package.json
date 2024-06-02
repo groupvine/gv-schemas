@@ -1,6 +1,6 @@
 {
   "name": "gv-schemas",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "GroupVine API Schemas",
   "main": "index.js",
   "scripts": {
